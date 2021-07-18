@@ -40,7 +40,37 @@ ladders = {
     88: 91
 }
 def welcome_msg():
-    return input("Hit Enter to start :").strip()
+    msg = """
+***********************************************************************************
+*               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>              *
+*               ^                                                  ^              *
+*               ^ Welcome to Snake ~~~~~> and Ladder ####### Game  ^              *
+*               ^                                                  ^              *
+*               ####################################################              *
+*          _____________________________________________________________          *
+*         |                                                             |         *
+*         |      Rules:                                                 |         *
+*         |      1. Initally player(s) starts at 0.                     |         *
+*         |          dice will be rolled each turn, Moving the player   |         * 
+*         |          forward the number of spaces shown on the dice.    |         *
+*         |      2. If you lands at the bottom of a ladder,             |         *
+*         |          you climb to the top of the ladder.                |         *
+*         |      3. If you lands on the head of a snake,                |         *
+*         |          you fall down to the bottom of the snake.          |         *
+*         |      4. If player gets to the FINAL position                |         *
+*         |          he will be declared the winner.                    |         *
+*         |                                                             |         *
+*         |      This game will run for """+str(max_steps)+""" steps                        |         *
+*         |      Press <enter> to start game                            |         *
+*         |                                                             |         *
+*         |_____________________________________________________________|         *
+*                                                                                 *
+*                                                                                 *
+*                                                                                 *
+***********************************************************************************
+"""
+
+    return input(msg).strip()
 
 
 
@@ -50,7 +80,7 @@ def role_dice():
     if crooked_dice == True:
         if (steps % 2 != 0):
             steps += 1
-    print("\n" +"The dice tuned to be " + str(steps))
+    print("\n" +"The dice tuned to be [" + str(steps)+"]")
     return steps
 
 
@@ -90,9 +120,7 @@ def main():
     if player_input.lower() == "crooked":
         print("You have unlocked the Crooked Dice that only throws Even numbers! ;-)")
         global crooked_dice
-        crooked_dice= True
-
-
+        crooked_dice = True
     player1_position = 0
 
     # while True:
