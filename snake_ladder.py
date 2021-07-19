@@ -88,10 +88,8 @@ def role_dice():
 
 def process_steps(player_name,current_position,steps):
     time.sleep(sleep_time)
-    if not (current_position.isnumeric() and steps.isnumeric()):
-        return
-    old_position = int(current_position)
-    current_position = int(current_position + steps)
+    old_position = current_position
+    current_position = current_position + steps
 
     if current_position > board_size:
         print("You need " + str(board_size - old_position) + " to win this game. Keep trying.")
