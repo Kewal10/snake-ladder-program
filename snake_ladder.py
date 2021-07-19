@@ -1,4 +1,5 @@
 import random
+import time
 
 
 
@@ -6,7 +7,7 @@ board_size = 100
 max_steps = 10
 crooked_dice = False
 player_name = "Player 1"
-
+sleep_time = 0.5
 
 snakes = {
     18: 1,
@@ -76,6 +77,7 @@ def welcome_msg():
 
 
 def role_dice():
+    time.sleep(sleep_time)
     steps = random.randint(1, 6)
     if crooked_dice == True:
         if (steps % 2 != 0):
@@ -85,6 +87,7 @@ def role_dice():
 
 
 def process_steps(player_name,current_position,steps):
+    time.sleep(sleep_time)
     old_position = current_position
     current_position = current_position + steps
 
@@ -108,6 +111,7 @@ def process_steps(player_name,current_position,steps):
 
 
 def check_winner(player_name, position):
+    time.sleep(sleep_time)
     if board_size == position:
         print("\n\n\nHe have a WINNERR!!!!.\n\n" + player_name + " won the game.")
         print("Congratulations " + player_name)
@@ -117,6 +121,7 @@ def check_winner(player_name, position):
 
 def main():
     player_input = welcome_msg()
+    time.sleep(sleep_time)
     if player_input.lower() == "crooked":
         print("You have unlocked the Crooked Dice that only throws Even numbers! ;-)")
         global crooked_dice
@@ -126,12 +131,13 @@ def main():
     # while True:
     for i in range(max_steps):
         steps = role_dice()
+        time.sleep(sleep_time)
         player1_position = process_steps(player_name, player1_position, steps)
-
+        time.sleep(sleep_time)
         if check_winner(player_name,player1_position):
              break
         print("\n====================================================================")
-    print("Game Over!!")
+    print("Game Over!! \n====================================================================")
 
 if __name__ == '__main__':
     main()
