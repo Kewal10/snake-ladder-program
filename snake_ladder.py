@@ -7,7 +7,7 @@ board_size = 100
 max_steps = 10
 crooked_dice = False
 player_name = "Player 1"
-sleep_time = 0.5
+sleep_time = 1
 
 snakes = {
     18: 1,
