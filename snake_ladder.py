@@ -130,6 +130,7 @@ def main():
 
     # while True:
     for i in range(max_steps):
+        print("\nRolling dice...[*]")
         steps = role_dice()
         time.sleep(sleep_time)
         player1_position = process_steps(player_name, player1_position, steps)
