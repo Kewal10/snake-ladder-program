@@ -69,7 +69,7 @@ def welcome_msg():
 *                                                                                 *
 *                                                                                 *
 ***********************************************************************************
-"""
+\n"""
 
     return input(msg).strip()
 
@@ -123,7 +123,7 @@ def main():
     player_input = welcome_msg()
     time.sleep(sleep_time)
     if player_input.lower() == "crooked":
-        print("You have unlocked the Crooked Dice that only throws Even numbers! ;-)")
+        print("\n***********************************************************************************\n You have unlocked the Crooked Dice that only throws Even numbers! ;-)\n***********************************************************************************\n")
         global crooked_dice
         crooked_dice = True
     player1_position = 0
