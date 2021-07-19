@@ -2,3 +2,6 @@
 
 # snake-ladder-program
 A simple text based snake and ladder program using python 3.9
+
+
+Pro Tip ;) - Enter the code "crooked" and hit enter/return while on welcome message screen to unlock 'crooked dice'(A dice that only throws Even numbers).
