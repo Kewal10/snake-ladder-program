@@ -113,7 +113,7 @@ def process_steps(player_name,current_position,steps):
 def check_winner(player_name, position):
     time.sleep(sleep_time)
     if board_size == position:
-        print("\n\n\nHe have a WINNERR!!!!.\n\n" + player_name + " won the game.")
+        print("\n\n\nWe have a WINNERR!!!!.\n\n" + player_name + " won the game.")
         print("Congratulations " + player_name)
         return True
 
